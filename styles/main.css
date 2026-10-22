@@ -1,0 +1,73 @@
+:root {
+  --green: #0b6e4f;
+  --gold: #f4c430;
+  --ink: #1d2b25;
+  --paper: #fbfdfc;
+  --line: #c9dfd4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+header, main, footer {
+  max-width: 52rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header { display: grid; gap: .5rem; }
+header img { border-radius: 50%; }
+h1 { color: var(--green); margin: 0; }
+h2 { color: var(--green); margin-top: 2rem; }
+
+nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; padding: 0; margin: 0; }
+nav a { font-weight: 600; }
+nav a[aria-current="page"] { text-decoration: none; border-bottom: 3px solid var(--gold); }
+
+a { color: var(--green); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+img, video { max-width: 100%; height: auto; }
+
+aside {
+  background: #eef6f2;
+  border-left: 4px solid var(--gold);
+  padding: .5rem 1rem;
+  margin-top: 2rem;
+}
+
+blockquote { margin: 1rem 0; padding-left: 1rem; border-left: 4px solid var(--line); }
+
+table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+caption { text-align: left; font-weight: 600; padding-bottom: .5rem; }
+th, td { border: 1px solid var(--line); padding: .5rem .75rem; text-align: left; }
+thead th { background: var(--green); color: #fff; }
+tfoot th, tfoot td { background: #eef6f2; font-weight: 700; }
+.table-wrap { overflow-x: auto; }
+
+fieldset { border: 1px solid var(--line); border-radius: .5rem; margin: 1rem 0; padding: .5rem 1rem 1rem; }
+legend { font-weight: 700; color: var(--green); padding: 0 .5rem; }
+label { display: inline-block; min-height: 1.5rem; }
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  display: block; width: 100%; max-width: 28rem; font: inherit; padding: .5rem; margin-top: .25rem;
+  border: 1px solid #7a9a8b; border-radius: .25rem;
+}
+input[type="radio"], input[type="checkbox"] { width: 1.1rem; height: 1.1rem; margin-right: .4rem; }
+
+button {
+  font: inherit; font-weight: 700; padding: .75rem 1.5rem; border: 0; border-radius: .25rem;
+  background: var(--green); color: #fff; cursor: pointer;
+}
+button:hover { background: #09593f; }
+
+footer { border-top: 1px solid var(--line); margin-top: 2rem; font-size: .9rem; }
